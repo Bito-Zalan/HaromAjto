@@ -11,8 +11,12 @@ public class JatekModell {
         ajtok = new Ajto[3];
         rnd = new Random();
         int autoHelye = rnd.nextInt(3);
-        for (int i = 0; i < 3; i++) {
-            ajtok[i] = new Ajto(i == autoHelye);
-        }
+        ajtok[0] = new Ajto(autoHelye == 0);
+        ajtok[1] = new Ajto(autoHelye == 1);
+        ajtok[2] = new Ajto(autoHelye == 2);
+    }
+
+    public Ajto[] getAjtok() {
+        return ajtok;
     }
 }
